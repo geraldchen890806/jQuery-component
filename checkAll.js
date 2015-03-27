@@ -52,6 +52,15 @@
         }
     };
 
-    GeUI.Plugin.define('checkAll', CheckAll);
+    //GeUI.Plugin.define('checkAll', CheckAll);
+    $.fn.checkAll = function (option) {
+        return this.each(function () {
+            var $this = $(this),
+              data = $this.data('checkAll'),
+              options = $.extend({}, $this.data(), typeof option === 'object' && option);
+            if (!data) $this.data('checkAll', (data = new CheckAll(this, options)));
+            if (typeof option == 'string') data[option].call($this)
+        })
+    };
 
 } (window.jQuery);

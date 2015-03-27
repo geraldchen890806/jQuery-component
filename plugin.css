@@ -1,0 +1,5 @@
+/*分页工具*/
+.pageFooter a { color:#0000cc; width: 22px; height: 22px; display: inline-block;  vertical-align: bottom; padding:0 7px; text-align: center;  line-height: 22px;  text-decoration: none;  overflow: hidden;  margin-right: 9px;  background: white;  border: 1px solid #e1e2e3;  cursor: pointer;}
+.pageFooter .n { width:auto; }
+.pageFooter a.current { border:none; }
+.pageFooter input { width:30px; }
